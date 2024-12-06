@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+<!-- NavBar -->
+<section>
+    <nav class="z-10 sticky top-0 bg-[#FFFFFF] border-gray-200 shadow-xl mb-0">
+        <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+            <!-- Logo Section -->
+            <a href="#" class="flex items-center">
+                <img src="logov1.png" class="h-14 mr-6" alt="BSC Logo"/>
+            </a>
+
+            <!-- Navbar Links -->
+            <div class="hidden md:flex items-center w-auto menu-container" id="navbar-search">
+                <ul class="text-lg flex flex-row space-x-6 font-medium">
+                    <li>
+                        <a href="#" class="block py-2 px-4 text-white font-bold bg-[#D63731] rounded md:bg-transparent md:text-[#C22026] md:hover:text-[#C22026]">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-4 text-[#C22026] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:font-bold">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-4 text-[#C22026] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:font-bold">Solutions</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-4 text-[#C22026] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:font-bold">Secure Cloud</a>
+                    </li>
+                    <li class="relative group">
+                        <a class="block py-2 px-4 text-[#C22026] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:font-bold">
+                            Opportunities
+                            <svg class="w-3 h-3 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
+                            </svg>
+                        </a>
+                        <ul class="absolute hidden group-hover:block space-y-2 p-4 bg-white rounded-lg shadow">
+                            <li><a href="#" class="hover:text-red-600 hover:underline underline-offset-8 flex">Career</a></li>
+                            <li><a href="#" class="hover:text-red-600 hover:underline underline-offset-8 flex">Tenders</a></li>
+                        </ul>
+                    </li>
+                    <li class="bg-[#C55B11] rounded-full">
+                        <a href="#" class="block py-2 px-4 text-white">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuItems = document.querySelectorAll(".drpdwn");
+        const submenus = document.querySelectorAll(".drpdwn ul");
+        if (window.innerWidth >= 768) {
+            // On laptops
+            menuItems.forEach((menuItem, index) => {
+                menuItem.addEventListener("mouseenter", () => {
+                    const submenu = submenus[index];
+                    submenus.forEach((otherSubmenu) => {
+                        if (otherSubmenu !== submenu) {
+                            otherSubmenu.classList.add("hidden");
+                        }
+                    });
+                    submenu.classList.remove("hidden");
+                });
+                menuItem.addEventListener("mouseleave", () => {
+                    const submenu = submenus[index];
+                    submenu.classList.add("hidden");
+                });
+            });
+        } else {
+            // On smaller screens
+            menuItems.forEach((menuItem, index) => {
+                menuItem.addEventListener("click", () => {
+                    const submenu = submenus[index];
+                    submenus.forEach((otherSubmenu) => {
+                        if (otherSubmenu !== submenu) {
+                            otherSubmenu.classList.add("hidden");
+                        }
+                    });
+                    submenu.classList.toggle("hidden");
+                });
+            });
+        }
+    });
+</script>
+  
+</body>
+</html>
