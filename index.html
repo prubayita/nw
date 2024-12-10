@@ -65,9 +65,9 @@
             <div class="mx-auto  max-w-md rounded-3xl p-px bg-gradient-to-b from-blue-300 via-[#f5d718] to-pink-300">
                 <div class="rounded-[calc(1.5rem-1px)] px-10 pt-16 pb-28 bg-red-800">
                     <div class="mb-8 flex gap-4 items-center">
-                        <img class="h-12 w-12 rounded-full" src="#" alt="" />
+                        <img class="h-12 w-12 rounded-full" src="image/visual-identities1.png" alt="" />
                         <div>
-                            <h3 class="text-4xl font-medium text-gray-200">Our Vision</h3>
+                            <h3 class="text-4xl font-bold text-gray-200">Our Vision</h3>
                             <!-- <span class="text-sm tracking-wide text-gray-300">Fullstack Developer</span> -->
                         </div>
                     </div>
@@ -78,7 +78,7 @@
             <div class="mx-auto  max-w-md rounded-3xl p-px bg-gradient-to-b from-blue-300 via-[#f5d718] to-pink-300">
                 <div class="rounded-[calc(1.5rem-1px)] px-10 py-16 bg-red-800">
                     <div class="mb-8 flex gap-4 items-center">
-                        <img class="h-12 w-12 rounded-full" src="#" alt="" />
+                        <img class="h-12 w-12 rounded-full" src="image/target1.png" alt="" />
                         <div>
                             <h3 class="text-4xl font-bold text-gray-200">Our Mission</h3>
                             <!-- <span class="text-sm tracking-wide text-gray-300">Fullstack Developer</span> -->
@@ -204,9 +204,96 @@
     <div class="relative z-10 max-w-7xl mx-auto py-20 px-6 text-center">
         <h2 class="text-4xl font-bold mb-4">OUR PRODUCTS</h2>
     </div>
+    <!-- Product Header (Navbar) -->
+    <main class="flex flex-col items-center min-h-screen">
+        <div class="w-[40rem]">
+            <!-- Product Navbar -->
+            <div class="grid grid-cols-4 gap-0 ">
+                <!-- Product 1 Tab -->
+                <div class="product-tab bg-[#C22026] text-white font-bold cursor-pointer p-3 text-center rounded-tl-xl" data-product="content-product1">
+                    Product 1
+                </div>
+
+                <!-- Product 2 Tab -->
+                <div class="product-tab bg-gray-200 cursor-pointer p-3 text-center" data-product="content-product2">
+                    Product 2
+                </div>
+
+                <!-- Product 3 Tab -->
+                <div class="product-tab bg-gray-200 cursor-pointer p-3 text-center" data-product="content-product3">
+                    Product 3
+                </div>
+
+                <!-- Product 4 Tab -->
+                <div class="product-tab bg-gray-200 cursor-pointer p-3 text-center rounded-tr-xl" data-product="content-product4">
+                    Product 4
+                </div>
+            </div>
+
+            <!-- Product Content Section -->
+            <div class="bg-[#C22026] p-4 rounded-b-xl">
+                <!-- Content for Product 1 -->
+                <div class="product-content" id="content-product1">
+                    <!-- <h2 class="text-xl font-bold mb-2">Product 1</h2> -->
+                    <div class="flex items-center gap-4">
+                        <img src="image/Rectangle5.png" alt="Product 1 Image" class="w-96 rounded-lg object-cover">
+                        <p>This is the description for Product 1. It provides details about the features and benefits of the product.</p>
+                    </div>
+                </div>
+
+                <!-- Content for Product 2 -->
+                <div class="product-content hidden" id="content-product2">
+                    <!-- <h2 class="text-xl font-bold mb-2">Product 2</h2> -->
+                    <div class="flex items-center gap-4">
+                        <img src="image/Rectangle5.png" alt="Product 2 Image" class="w-96 rounded-lg object-cover">
+                        <p>This is the description for Product 2. It explains why the product is useful and how it stands out.</p>
+                    </div>
+                </div>
+
+                <!-- Content for Product 3 -->
+                <div class="product-content hidden" id="content-product3">
+                    <!-- <h2 class="text-xl font-bold mb-2">Product 3</h2> -->
+                    <div class="flex items-center gap-4">
+                        <img src="image/Rectangle5.png" alt="Product 3 Image" class="w-96 rounded-lg object-cover">
+                        <p>This is the description for Product 3. It highlights key features and customer benefits.</p>
+                    </div>
+                </div>
+
+                <!-- Content for Product 4 -->
+                <div class="product-content hidden" id="content-product4">
+                    <!-- <h2 class="text-xl font-bold mb-2">Product 4</h2> -->
+                    <div class="flex items-center gap-4">
+                        <img src="image/Rectangle5.png" alt="Product 4 Image" class="w-96 rounded-lg object-cover">
+                        <p>This is the description for Product 4. It showcases the product's unique attributes and benefits.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </section>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // When a product tab is clicked
+        $('.product-tab').click(function () {
+            // Remove the active class from all product tabs
+            $('.product-tab').removeClass('bg-[#C22026] text-white font-bold').addClass('bg-gray-200');
+
+            // Add the active class to the clicked tab
+            $(this).addClass('bg-[#C22026] text-white font-bold').removeClass('bg-gray-200');
+
+            // Get the id of the product tab clicked
+            const productId = $(this).data('product');
+
+            // Hide all product content
+            $('.product-content').addClass('hidden');
+
+            // Show the content for the selected product
+            $(`#${productId}`).removeClass('hidden');
+        });
+    });
+</script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const menuItems = document.querySelectorAll(".drpdwn");
