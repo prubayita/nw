@@ -3,9 +3,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>Document</title>
 </head>
-<body>
+<body class="bg-gray-100">
 <!-- NavBar -->
 <section>
     <nav class="z-10 sticky top-0 bg-[#FFFFFF] border-gray-200 shadow-xl mb-0">
@@ -126,6 +131,8 @@
         </div>
     </div>
 </section>
+
+
 <!-- Why Choose Us Section -->
 <section class="relative bg-cover bg-center bg-no-repeat" style="background-image: url('image/Rectangle3.png');">
     <!-- Overlay for better text visibility -->
@@ -200,6 +207,7 @@
         </div>
     </div>
 </section>
+<!-- OUR PRODUCTS -->
 <section class="">
     <div class="relative z-10 max-w-7xl mx-auto py-20 px-6 text-center">
         <h2 class="text-4xl font-bold mb-4">OUR PRODUCTS</h2>
@@ -272,7 +280,218 @@
     </main>
 </section>
 
+<!-- BLOG & NEWS-->
+<section class="">
+    <div class="relative z-10 max-w-7xl mx-auto py-20 px-6 text-center">
+        <h2 class="text-4xl font-bold mb-4">BLOG & NEWS</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Card 1 -->
+            <div class="mx-auto  max-w-md rounded-3xl p-px bg-gradient-to-b from-blue-300 via-[#f5d718] to-pink-300">
+                <div class="rounded-[calc(1.5rem-1px)] pb-12 bg-[#FCF4F4]">
+                    <img class="w-full" src="image/Rectangles5.png" alt="" />
+                    <div class="mb-8 flex gap-4 items-center px-10 pt-4">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900">BSC's Unveiling Event</h3>
+                            <!-- <span class="text-sm tracking-wide text-gray-300">Fullstack Developer</span> -->
+                        </div>
+                    </div>
+                    <p class="px-6 text-md text-gray-900">November 9th, 2023, marked a momentous occasion for BSC – an event that celebrated not just achievem...</p>
+                </div>
+            </div>
+        
+            <!-- Card 2 -->
+            <div class="mx-auto  max-w-md rounded-3xl p-px bg-gradient-to-b from-blue-300 via-[#f5d718] to-pink-300">
+                <div class="rounded-[calc(1.5rem-1px)] pb-12 bg-[#FCF4F4]">
+                    <img class="w-full" src="image/Rectangles5.png" alt="" />
+                    <div class="mb-8 flex gap-4 items-center px-10 pt-4">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900">The Vital Role of Cybersecurity</h3>
+                            <!-- <span class="text-sm tracking-wide text-gray-300">Fullstack Developer</span> -->
+                        </div>
+                    </div>
+                    <p class="px-6 text-md text-gray-900">In today's digitally driven world, education isn't confined within the walls of a classroom. The int...</p>            
+                </div>
+            </div>    
+        </div>
+    </div>
+
+</section>
+
+<!-- REVIEWS FROM OUR CLIENTS -->
+<section class="py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-16 ">
+            <!-- <span class="text-sm text-gray-500 font-medium text-center block mb-2">TESTIMONIAL</span> -->
+            <h2 class="text-4xl text-center font-bold text-gray-900 ">REVIEWS FROM OUR CLIENTS</h2>
+        </div>
+        <!--Slider wrapper-->
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper w-max">
+                <div class="swiper-slide">
+                    <div
+                        class="group bg-white border border-solid border-gray-300 rounded-xl p-6 transition-all duration-500  w-full mx-auto hover:border-indigo-600 hover:shadow-sm slide_active:border-indigo-600">
+                        <div class="">
+                            <div class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500  ">
+                                <img src="image/“.png" alt="" srcset="">
+                            </div>
+                            <p
+                                class="text-base text-gray-600 leading-6  transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800">
+                                BSC has made it possible for me to stay on top of my portfolio and make
+                                informed
+                                decisions
+                                quickly and easily.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-5 border-t border-solid border-gray-200 pt-5">
+                            <img class="rounded-full h-10 w-10 object-cover" src="image/Ellipse2.png"
+                                alt="avatar" />
+                            <div class="block">
+                                <h5 class="text-gray-900 font-medium transition-all duration-500  mb-1">Jane D</h5>
+                                <span class="text-sm leading-4 text-gray-500">CEO </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div
+                        class="group bg-white border border-solid border-gray-300 flex justify-between flex-col rounded-xl p-6 transition-all duration-500  w-full mx-auto hover:border-indigo-600 slide_active:border-indigo-600 hover:shadow-sm">
+                        <div class="">
+                            <div class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500  ">
+                                <img src="image/“.png" alt="" srcset="">
+                            </div>
+                            <p
+                                class="text-base text-gray-600 leading-6  transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800">
+                                Thanks to BSC, I feel more informed and confident about my investment decisions
+                                than
+                                ever
+                                before.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-5 pt-5 border-t border-solid border-gray-200">
+                            <img class="rounded-full h-10 w-10 object-cover" src="image/Ellipse2.png"
+                                alt="avatar" />
+                            <div class="block">
+                                <h5 class="text-gray-900 font-medium transition-all duration-500  mb-1">Harsh P.
+                                </h5>
+                                <span class="text-sm leading-4 text-gray-500">Product Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div
+                        class=" flex justify-between flex-col lg:w-full group bg-white border border-solid border-gray-300 rounded-xl p-6 transition-all duration-500  w-full mx-auto slide_active:border-indigo-600 hover:border-indigo-600 hover:shadow-sm">
+                        <div class="">
+                            <div class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500  ">
+                                <img src="image/“.png" alt="" srcset="">
+                            </div>
+                            <p
+                                class="text-base text-gray-600 leading-6  transition-all duration-500  pb-8 group-hover:text-gray-800 slide_active:text-gray-800">
+                                The customer service team at BSC PLC went above and beyond to help me resolve a
+                                billing
+                                issue.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-5 border-t border-solid border-gray-200 pt-5">
+                            <img class="rounded-full h-10 w-10 object-cover" src="image/Ellipse2.png"
+                                alt="avatar" />
+                            <div class="block">
+                                <h5 class="text-gray-900 font-medium transition-all duration-500  mb-1">Alex K.</h5>
+                                <span class="text-sm leading-4 text-gray-500">Design Lead</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div
+                        class="group bg-white border border-solid border-gray-300 rounded-xl p-6 transition-all duration-500  w-full mx-auto slide_active:border-indigo-600 hover:border-indigo-600 hover:shadow-sm">
+                        <div class="">
+                            <div class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500  ">
+                                <img src="image/“.png" alt="" srcset="">
+                            </div>
+                            <p
+                                class="text-base text-gray-600 leading-6  transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800">
+                                BSC has made it possible for me to stay on top of my portfolio and make
+                                informed
+                                decisions
+                                quickly and easily.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-5 border-t border-solid border-gray-200 pt-5">
+                            <img class="rounded-full h-10 w-10 object-cover" src="image/Ellipse2.png"
+                                alt="avatar" />
+                            <div class="block">
+                                <h5 class="text-gray-900 font-medium transition-all duration-500  mb-1">Jane D</h5>
+                                <span class="text-sm leading-4 text-gray-500">CEO </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div
+                        class="group bg-white border border-solid border-gray-300 flex justify-between flex-col rounded-xl p-6 transition-all duration-500  w-full mx-auto slide_active:border-indigo-600 hover:border-indigo-600 hover:shadow-sm ">
+                        <div class="">
+                            <div class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500  ">
+                                <img src="image/“.png" alt="" srcset="">
+                            </div>
+                            <p
+                                class="text-base text-gray-600 leading-6  transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800">
+                                Thanks to BSC, I feel more informed and confident about my investment decisions
+                                than
+                                ever
+                                before.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-5 pt-5 border-t border-solid border-gray-200">
+                            <img class="rounded-full h-10 w-10 object-cover" src="image/Ellipse2.png"
+                                alt="avatar" />
+                            <div class="block">
+                                <h5 class="text-gray-900 font-medium transition-all duration-500  mb-1">Harsh P.
+                                </h5>
+                                <span class="text-sm leading-4 text-gray-500">Product Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 32,
+        loop: true,
+        centeredSlides: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+    
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 32,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 32,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 32,
+        },
+      },
+    });
+</script>
 <script>
     $(document).ready(function () {
         // When a product tab is clicked
