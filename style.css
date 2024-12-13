@@ -20,12 +20,13 @@
         background: #4F46E5 !important;
     }
     
-    .swiper-slide.swiper-slide-active>.slide_active\:border-indigo-600 {
-        --tw-border-opacity: 1;
-        border-color: rgb(79 70 229 / var(--tw-border-opacity));
+    .swiper-slide.swiper-slide-active {
+        transform: scale(1.2); /* Scale up the active slide */
     }
 
-    .swiper-slide.swiper-slide-active>.group .slide_active\:text-gray-800 {
-        ---tw-text-opacity: 1;
-        color: rgb(31 41 55 / var(--tw-text-opacity));
+    .swiper-slide {
+        transition: transform 0.5s ease; /* Smooth transition for the scaling */
+    }
+    .swiper {
+        padding-top: 40px; /* Add some top padding to prevent cut-off */
     }
