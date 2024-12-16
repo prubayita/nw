@@ -494,6 +494,58 @@
     </div>
 </section>
 
+<!-- OUR PARTNERS -->
+<section class="py-24 bg-gray-300">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-16">
+            <h2 class="text-4xl text-center font-bold text-gray-900">OUR PARTNERS</h2>
+        </div>
+        
+        <!--Slider wrapper-->
+        <div class="swiper prtnSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide flex items-center justify-center">
+                    <img src="image/BNR2.png" alt="BNR2 Logo" class="">
+                </div>
+                <div class="swiper-slide flex items-center justify-center">
+                    <img src="image/Rba.png" alt="Rba Logo" class="">
+                </div>
+                <div class="swiper-slide flex items-center justify-center">
+                    <img src="image/BNR2.png" alt="Rssb Logo" class="">
+                </div>
+                <div class="swiper-slide flex items-center justify-center">
+                    <img src="image/Rba.png" alt="BNR Logo" class="">
+                </div>
+                <div class="swiper-slide flex items-center justify-center">
+                    <img src="image/BNR2.png" alt="Rba Logo" class="">
+                </div>
+                <div class="swiper-slide flex items-center justify-center">
+                    <img src="image/Rba.png" alt="BNR Logo" class="">
+                </div>
+                <div class="swiper-slide flex items-center justify-center">
+                    <img src="image/BNR2.png" alt="Rba Logo" class="">
+                </div>
+                <div class="swiper-slide flex items-center justify-center">
+                    <img src="image/Rba.png" alt="BNR Logo" class="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    new Swiper('.prtnSwiper', {
+        slidesPerView: 5, // Number of logos visible
+        spaceBetween: 0,  // No space between logos
+        loop: true,       // Infinite scrolling
+        freeMode: true,   // Continuous movement (not "snap to slide")
+        autoplay: {
+            delay: 0, // Continuous scrolling
+            disableOnInteraction: false, // Keep autoplay on after user interaction
+        },
+        speed: 3000, // The speed of movement (higher = slower)
+    });   
+</script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     var swiper = new Swiper(".mySwiper", {

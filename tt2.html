@@ -92,7 +92,7 @@
 </style>
 
 
-<section class="py-24">
+<section class="py-24 bg-gray-300">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mb-16">
             <span class="text-sm text-gray-500 font-medium text-center block mb-2">TESTIMONIAL</span>
@@ -100,75 +100,63 @@
         </div>
 
         <!--Slider wrapper-->
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper w-max">                
-                <div class="swiper-slide p-6">
-                    <div class="group flex justify-between flex-col transition-all duration-500 rounded-3xl w-full mx-auto hover:shadow-sm">
-                        <div class="max-w-md rounded-3xl p-px bg-gradient-to-b from-blue-300 via-[#f5d718] to-pink-300">
-                            <div class="rounded-[calc(1.5rem-1px)] bg-[#FCF4F4]">
-                                <div class="p-6">
-                                    <p class="text-base text-gray-600 leading-6 transition-all duration-500 pb-8">
-                                        BSC has made it possible for me to stay on top of my portfolio and make informed decisions quickly and easily.
-                                    </p>
-                                    <div class="flex items-center gap-5 pt-5 border-t border-solid border-gray-200">
-                                        <img class="rounded-full h-10 w-10 object-cover" src="image/Ellipse2.png" alt="avatar" />
-                                        <div class="block">
-                                            <h5 class="text-gray-900 font-medium transition-all duration-500 mb-1">Jane D</h5>
-                                            <span class="text-sm leading-4 text-gray-500">CEO</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div class="swiper prtnSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="group bg-white border border-solid border-gray-300 rounded-xl transition-all duration-500 mx-auto hover:shadow-sm">
+                        <img src="image/BNR2.png" alt="" class="">
                     </div>
                 </div>
-
-                <div class="swiper-slide p-6">
-                    <div class="group flex justify-between flex-col transition-all duration-500 rounded-3xl w-full mx-auto hover:shadow-sm">
-                        <div class="max-w-md rounded-3xl p-px bg-gradient-to-b from-blue-300 via-[#f5d718] to-pink-300">
-                            <div class="rounded-[calc(1.5rem-1px)] bg-[#FCF4F4]">
-                                <div class="p-6">
-                                    <p class="text-base text-gray-600 leading-6 transition-all duration-500 pb-8">
-                                        Thanks to BSC, I feel more informed and confident about my investment decisions than ever before.
-                                    </p>
-                                    <div class="flex items-center gap-5 pt-5 border-t border-solid border-gray-200">
-                                        <img class="rounded-full h-10 w-10 object-cover" src="image/Ellipse2.png" alt="avatar" />
-                                        <div class="block">
-                                            <h5 class="text-gray-900 font-medium transition-all duration-500 mb-1">Harsh P.</h5>
-                                            <span class="text-sm leading-4 text-gray-500">Product Designer</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="swiper-slide">
+                    <div class="group bg-white border border-solid border-gray-300 rounded-xl transition-all duration-500 mx-auto hover:shadow-sm">
+                        <img src="image/Rba.png" alt="" class="">
                     </div>
-                </div>                
-
-                <div class="swiper-slide p-6">
-                    <div class="group flex justify-between flex-col transition-all duration-500 rounded-3xl w-full mx-auto hover:shadow-sm">
-                        <div class="max-w-md rounded-3xl p-px bg-gradient-to-b from-blue-300 via-[#f5d718] to-pink-300">
-                            <div class="rounded-[calc(1.5rem-1px)] bg-[#FCF4F4]">
-                                <div class="p-6">
-                                    <p class="text-base text-gray-600 leading-6 transition-all duration-500 pb-8">
-                                        The customer service team at BSC PLC went above and beyond to help me resolve a billing issue.
-                                    </p>
-                                    <div class="flex items-center gap-5 pt-5 border-t border-solid border-gray-200">
-                                        <img class="rounded-full h-10 w-10 object-cover" src="image/Ellipse2.png" alt="avatar" />
-                                        <div class="block">
-                                            <h5 class="text-gray-900 font-medium transition-all duration-500 mb-1">Alex K.</h5>
-                                            <span class="text-sm leading-4 text-gray-500">Design Lead</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="group bg-white border border-solid border-gray-300 rounded-xl transition-all duration-500 mx-auto hover:shadow-sm">
+                        <img src="image/Rssb.png" alt="" class="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="group bg-white border border-solid border-gray-300 rounded-xl transition-all duration-500 mx-auto hover:shadow-sm">
+                        <img src="image/BNR.png" alt="" class="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="group bg-white border border-solid border-gray-300 rounded-xl transition-all duration-500 mx-auto hover:shadow-sm">
+                        <img src="image/Rba.png" alt="" class="">
                     </div>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
         </div>
     </div>
 </section>
+<script>
+    var swiper = new Swiper(".prtnSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 32,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 32,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 32,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 32,
+        },
+      },
+    });
+    </script>
 
 <script>
     var swiper = new Swiper(".mySwiper", {
