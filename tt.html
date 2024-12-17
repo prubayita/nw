@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -53,6 +54,43 @@
         </div>
     </nav>
 </section>
+
+<section class="bg-gradient-to-br from-[#C22026] via-[#C22026] to-red-400">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
+            <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-[#FFFFFF]">SUBSCRIBE TO OUR NEWSLETTER</h2>
+        </div>
+        <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
+            <p class="font-light text-[#FFFFFF] sm:text-xl">Say goodbye to awkward buffering times and hello to smooth HD video quality.
+                Download and share all the content you want.</p>
+        </div>
+        <form action="#">
+            <div class="relative max-w-screen-sm mx-auto mb-3">
+                <label for="email" class="hidden mb-2 text-sm font-medium text-gray-200">Email address</label>
+                
+                <!-- Gradient Border Wrapper -->
+                <div class="p-[2px] rounded-full bg-gradient-to-r from-[#f5d718] via-red-500 to-red-500">
+                    <!-- Input Field -->
+                    <input 
+                        class="block w-full p-3 pl-4 text-lg text-gray-200 bg-red-500 rounded-full placeholder-gray-200
+                               focus:outline-none focus:ring-0" 
+                        placeholder="Enter your email" 
+                        type="email" 
+                        id="email" 
+                        required>
+                </div>
+                
+                <!-- Submit Button on Top -->
+                <button  type="submit" class="absolute top-0 right-0 bottom-0 m-auto py-3 px-10 text-xl font-bold text-center text-[#C22026] bg-white rounded-full shadow-lg hover:font-extrabold hover:scale-105 transition-all">
+                    Subscribe
+                </button>
+            </div>
+        </form>
+        
+        
+    </div>
+</section>
+
 
 <style>
     .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
@@ -227,7 +265,85 @@
         </div>
     </div>
 </section>
+
 <!-- PARTNERS -->
+<section class="py-24 bg-gray-300">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <!-- Section Heading -->
+      <div class="mb-16 text-center">
+        <h2 class="text-4xl font-bold text-gray-900">OUR PARTNERS</h2>
+      </div>
+  
+      <!-- Logo Scrolling Container -->
+      <div class="overflow-hidden relative">
+        <div id="logo-slider" class="flex space-x-8 animate-scroll">
+          <!-- Logos -->
+          <div class="flex items-center justify-center">
+            <img src="image/BNR2.png" alt="BNR2 Logo" class="h-16 md:h-20 object-contain">
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="image/Rba.png" alt="RBA Logo" class="h-16 md:h-20 object-contain">
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="image/BNR2.png" alt="RSSB Logo" class="h-16 md:h-20 object-contain">
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="image/Rba.png" alt="BNR Logo" class="h-16 md:h-20 object-contain">
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="image/BNR2.png" alt="BNR2 Logo" class="h-16 md:h-20 object-contain">
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="image/Rba.png" alt="RBA Logo" class="h-16 md:h-20 object-contain">
+          </div>
+  
+          <!-- Duplicate the logos for seamless scrolling -->
+          <div class="flex items-center justify-center">
+            <img src="image/BNR2.png" alt="BNR2 Logo" class="h-16 md:h-20 object-contain">
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="image/Rba.png" alt="RBA Logo" class="h-16 md:h-20 object-contain">
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="image/BNR2.png" alt="RSSB Logo" class="h-16 md:h-20 object-contain">
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="image/Rba.png" alt="BNR Logo" class="h-16 md:h-20 object-contain">
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<style>
+    /* Custom CSS for scrolling animation */
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    
+    /* Apply the animation */
+    .animate-scroll {
+      animation: scroll 20s linear infinite;
+    }
+    
+    /* Pause on hover */
+    .animate-scroll:hover {
+      animation-play-state: paused;
+    }
+    </style>
+    
+    <script>
+      $(document).ready(function () {
+        // jQuery functionality can be enhanced here if needed
+        console.log("Logo slider initialized");
+      });
+    </script>
+
+
 
 <script>
 var swiper = new Swiper(".mySwiper", {
@@ -829,7 +945,7 @@ var swiper = new Swiper(".mySwiper", {
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const menuItems = document.querySelectorAll(".drpdwn");
