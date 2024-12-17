@@ -620,15 +620,17 @@
 </footer>
 
 <script>
-    $(document).ready(function () {
-        $('.product-tab').click(function () {
-            $('.product-tab').removeClass('bg-[#C22026] text-white font-bold').addClass('bg-gray-200');
-            $(this).addClass('bg-[#C22026] text-white font-bold').removeClass('bg-gray-200');
-            const productId = $(this).data('product');
-            $('.product-content').addClass('hidden');
-            $(`#${productId}`).removeClass('hidden');
-        });
-    });
+    new Swiper('.prtnSwiper', {
+        slidesPerView: 5, // Number of logos visible
+        spaceBetween: 0,  // No space between logos
+        loop: true,       // Infinite scrolling
+        freeMode: true,   // Continuous movement (not "snap to slide")
+        autoplay: {
+            delay: 0, // Continuous scrolling
+            disableOnInteraction: false, // Keep autoplay on after user interaction
+        },
+        speed: 3000, // The speed of movement (higher = slower)
+    });   
 </script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
@@ -663,7 +665,19 @@
     });
     </script>
 
-<script>
+    <script>
+        $(document).ready(function () {
+            $('.product-tab').click(function () {
+                $('.product-tab').removeClass('bg-[#C22026] text-white font-bold').addClass('bg-gray-200');
+                $(this).addClass('bg-[#C22026] text-white font-bold').removeClass('bg-gray-200');
+                const productId = $(this).data('product');
+                $('.product-content').addClass('hidden');
+                $(`#${productId}`).removeClass('hidden');
+            });
+        });
+    </script>
+
+<!-- <script>
     $(document).ready(function () {
         // When a product tab is clicked
         $('.product-tab').click(function () {
@@ -683,7 +697,7 @@
             $(`#${productId}`).removeClass('hidden');
         });
     });
-</script>
+</script> -->
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
