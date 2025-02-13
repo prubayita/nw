@@ -628,20 +628,27 @@
     </div>
 </footer>
 
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     new Swiper('.prtnSwiper', {
-        slidesPerView: 5, // Number of logos visible
-        spaceBetween: 0,  // No space between logos
-        loop: true,       // Infinite scrolling
-        freeMode: true,   // Continuous movement (not "snap to slide")
+        slidesPerView: 5, // Show 5 logos by default
+        spaceBetween: 10, // Adjust spacing as needed
+        loop: true,
         autoplay: {
-            delay: 0, // Continuous scrolling
-            disableOnInteraction: false, // Keep autoplay on after user interaction
+            delay: 1,  // Near-continuous movement
+            disableOnInteraction: false,
         },
-        speed: 3000, // The speed of movement (higher = slower)
-    });   
+        speed: 3000, // Smooth scrolling speed
+        freeMode: true, // Allows smooth, non-snapping movement
+        centeredSlides: false, // Prevents the active logo from getting bigger
+        breakpoints: {
+            640: { slidesPerView: 2 }, // Show 2 logos on small screens
+            1024: { slidesPerView: 5 } // Show 5 logos on large screens
+        }
+    });  
 </script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script>
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
@@ -656,6 +663,7 @@
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,  // Pauses when hovered
         },
         breakpoints: {
         640: {
