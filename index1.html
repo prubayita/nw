@@ -56,6 +56,30 @@
     </nav>
 </section>
 
+<!-- Include GSAP via CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+
+<div class="relative">
+  <img src="image/afrk.png" alt="Africa map" class="w-full">
+  <svg id="africa-map-animation" viewBox="0 0 800 600" class="absolute top-0 left-0 w-full h-full pointer-events-none">
+    <circle id="rwandaDot" cx="400" cy="300" r="5" fill="#FF0" />
+    <circle id="kenyaDot" cx="450" cy="250" r="5" fill="#FF0" opacity="0" />
+    <path id="lineToKenya" d="M400,300 L450,250" stroke="#FF0" stroke-width="2" fill="none" />
+  </svg>
+</div>
+
+<script>
+  // Create a GSAP timeline for coordinated animations
+  const tl = gsap.timeline({defaults: {duration: 1, ease: "power1.inOut"}});
+  
+  // Animate drawing the line (simulate by animating strokeDasharray/dashoffset if needed)
+  // For simplicity, here we animate the line's opacity and then fade in the dot
+  tl.fromTo("#lineToKenya", {opacity: 0}, {opacity: 1})
+    .to("#kenyaDot", {opacity: 1}, "-=0.5");
+</script>
+
+
+  
 <section class="py-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="relative z-10 max-w-7xl mx-auto py-20 px-6 text-center">
